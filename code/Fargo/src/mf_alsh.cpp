@@ -53,6 +53,7 @@ Hash::Hash(Preprocess &prep_, Parameter &param_,
 }
 
 void Hash::load_funtable(const std::string &file) {
+    printf("load funtable %s\n", file.c_str());
     std::ifstream is(file.c_str(), std::ios::binary);
     float header1[4] = {0};
     int header2[3] = {0};
@@ -114,7 +115,8 @@ void Hash::SetHash() {
         hashpar.rndAs2[i] = new float[1];
     }
 
-    std::mt19937 rng(int(std::time(0)));
+//    std::mt19937 rng(int(std::time(0)));
+    std::mt19937 rng(0);
     std::normal_distribution<float> nd;
     for (int j = 0; j < S; j++) {
         for (int i = 0; i < dim; i++) {
@@ -128,7 +130,8 @@ void Hash::SetHash() {
 
 void Hash::GetHash(Preprocess &prep) {
     float *dataExpend = new float[N];
-    std::mt19937 rng(int(std::time(0)));
+//    std::mt19937 rng(int(std::time(0)));
+    std::mt19937 rng(0);
     std::uniform_real_distribution<float> ur(-1, 1);
     int count = 0;
     for (int j = 0; j < N; j++) {

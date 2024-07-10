@@ -23,7 +23,7 @@ namespace mf_alsh {
         // Dimension of the hash table
         int K;
 
-        float **hashval;
+        float **hashval; // store the hash value of each item
         Partition parti;
         HashParam hashpar;
         std::vector<int> ***myIndexes;
