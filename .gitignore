@@ -1,4 +1,5 @@
 /code/Fargo/cmake-build-debug
 /code/Fargo/build/
 .idea
-
+/code/Fargo/fg
+/code/Fargo/results/

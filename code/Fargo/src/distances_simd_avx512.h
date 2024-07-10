@@ -16,10 +16,10 @@ namespace faiss {
  *********************************************************/
 
 /// inner product
-float fvec_inner_product_avx512(
-        const float* x,
-        const float* y,
-        size_t d);
+    float fvec_inner_product_avx512(
+            const float *x,
+            const float *y,
+            size_t d);
 
 } // namespace faiss
 
